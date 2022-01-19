@@ -2,6 +2,15 @@ import React from "react";
 import "./App.css";
 import Counter from "./features/counter/Counter";
 import { useGetPokemonByNameQuery } from "./services/pokemon";
+import {
+  CircularProgress,
+  Grid,
+  Typography,
+  InputLabel,
+  MenuItem,
+  FormControl,
+  Select,
+} from "@material-ui/core";
 
 function App() {
   const { data, error, isLoading } = useGetPokemonByNameQuery("bulbasaur");
@@ -23,3 +32,13 @@ function App() {
 }
 
 export default App;
+
+{
+  /* <Grid container spacing={3} className={classes.list}>
+  {places?.map((place, index) => (
+    <Grid item key={index} xs={12}>
+      <PlaceDetails place={place} />
+    </Grid>
+  ))}
+</Grid>; */
+}
